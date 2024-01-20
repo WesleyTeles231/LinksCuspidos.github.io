@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #363636; /* Dark gray background */
+      margin: 0;
+      padding: 0;
+      background-image: url('https://i.imgur.com/YOUR_IMAGE_URL.png');
+      background-repeat: repeat;
+      color: #fff; /* Set text color to white for better visibility on dark background */
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 10px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #363636;
+      padding: 10px;
+      text-align: center;
+      font-size: 0.8em; /* Smaller font size for the footer */
+    }
+  /* Adicione esta parte ao seu código CSS */
+  nav a {
+    text-decoration: none;
+    color: #555; /* Cor de menor contraste para os links */
+    margin: 0 10px;
+  }
+
+  footer {
+    background-color: #363636;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.8em; /* Smaller font size for the footer */
+    border: 2px solid #fff; /* Adiciona uma borda branca estilizada */
+    border-radius: 5px; /* Borda com cantos arredondados */
+  }
+  
+    /* Adicione esta parte ao seu código CSS */
+    section {
+      padding: 20px;
+      display: none; /* Inicia oculto por padrão */
+  </style>
+  <title>Ferramenta do Teles</title>
+</head>
+<body>
+  <header>
+    <h1>Links Cuspidos do Teles</h1>
+  </header>
+
+  <nav>
+    <a href="#categoria1">Navegadores</a>
+    <a href="#categoria2">Ultilitarios</a>
+    <a href="#categoria3">Educativos</a>
+  </nav>
+
+  <section id="categoria1">
+    <h2>Navegadores</h2>
+    <ul>
+      <li><a href="https://getmodsapk.com/download/soul-browser-mod-apk/Soul+Browser+1_4_01+MOD+APK">Soul 1.4.01</a></li>
+    </ul>
+  </section>
+
+  <section id="categoria2">
+    <h2>Ultilitarios</h2>
+    <ul>
+      <li><a href="https://play.google.com/store/apps/details?id=com.alphainventor.filemanager">File Manager</a></li>
+      <li><a href="https://revancedextended.com/">Youtube/Music</a></li>
+      <li><a href="#">Link 6</a></li>
+    </ul>
+  </section>
+
+  <section id="categoria3">
+    <h2>Categoria 3</h2>
+    <ul>
+      <li><a href="#">Link 7</a></li>
+      <li><a href="#">Link 8</a></li>
+      <li><a href="#">Link 9</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    Desenvolvido por Wesley Teles afim de facilitar achar aplicativos úteis na hora de atender clientes.
+  </footer>
+  <script>
+    // Adicione este script ao seu HTML
+    document.querySelectorAll('nav a').forEach(function(link) {
+      link.addEventListener('click', function(event) {
+        event.preventDefault(); // Evita a navegação padrão ao clicar nos links
+        var targetId = this.getAttribute('href').substring(1); // Obtém o ID da seção alvo
+        var targetSection = document.getElementById(targetId); // Obtém a seção alvo
+
+        // Esconde todas as seções
+        document.querySelectorAll('section').forEach(function(section) {
+          section.style.display = 'none';
+        });
+
+        // Mostra a seção alvo
+        targetSection.style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>
